@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turkcekit"
+version = "0.1.0"
+description = "Turkish-aware text utilities: correct İ/ı casing, slugs, Turkish alphabetical sorting, numbers and lira amounts in words. Zero dependencies."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Celalettin Durğaç"}]
+requires-python = ">=3.8"
+keywords = ["turkish", "türkçe", "slugify", "i18n", "nlp", "number-to-words", "collation"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Turkish",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+turkcekit = "turkcekit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/celaldrg/turkcekit"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
